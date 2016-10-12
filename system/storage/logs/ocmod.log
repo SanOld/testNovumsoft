@@ -1,0 +1,52 @@
+2016-01-10 18:03:27 - MOD: Modification Default
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 39
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 20
+LINE: 59
+LINE: 80
+LINE: 99
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 25
+LINE: 31
+----------------------------------------------------------------
+2016-01-10 18:07:21 - MOD: Modification Default
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 39
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 20
+LINE: 59
+LINE: 80
+LINE: 99
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 25
+LINE: 31
+----------------------------------------------------------------
+MOD: test Export (V1.0) for OpenCart 2.x
+FILE: admin/controller/common/menu.php
+CODE: $data['text_backup'] = $this->language->get('text_backup');
+LINE: 13
+CODE: $data['analytics'] = $this->url->link('extension/analytics', 'token=' . $this->session->data['token'], 'SSL');
+LINE: 115
+FILE: admin/language/english/common/menu.php
+CODE: $_['text_backup']
+LINE: 11
+FILE: admin/language/russian/common/menu.php
+CODE: $_['text_backup']
+LINE: 11
+FILE: admin/view/template/common/menu.tpl
+CODE: <li><a href="<?php echo $total; ?>"><?php echo $text_total; ?></a></li>
+LINE: 32
+----------------------------------------------------------------

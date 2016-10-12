@@ -1,0 +1,38 @@
+<modification>
+	<name>test Export (V1.0) for OpenCart 2.x</name>
+	<code>test Export (V1.0) for OpenCart 2.x</code>
+	<version>2.x-1.0</version>
+	<author>shehovtsov</author>
+	<file path="admin/controller/common/menu.php">
+		<operation>
+			<search><![CDATA[$data['text_backup'] = $this->language->get('text_backup');]]></search>
+			<add position="after"><![CDATA[
+				$data['text_export_import'] = $this->language->get('text_export_import');
+			]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[$data['analytics'] = $this->url->link('extension/analytics', 'token=' . $this->session->data['token'], 'SSL');]]></search>
+			<add position="after"><![CDATA[
+				$data['test_export'] = $this->url->link('extension/test_export', 'token=' . $this->session->data['token'], 'SSL');
+			]]></add>
+		</operation>
+	</file>
+	<file path="admin/language/*/common/menu.php">
+		<operation>
+			<search><![CDATA[$_['text_backup']]]></search>
+			<add position="after"><![CDATA[
+				$_['text_export_import']               = 'Export/Import xls';
+
+			]]></add>
+		</operation>
+	</file>
+	<file path="admin/view/template/common/menu.tpl">
+		<operation>
+			<search><![CDATA[<li><a href="<?php echo $total; ?>"><?php echo $text_total; ?></a></li>]]></search>
+			<add position="replace"><![CDATA[
+				<li><a href="<?php echo $total; ?>"><?php echo $text_total; ?></a></li>
+				<li><a href="<?php echo $test_export; ?>"><?php echo $text_export_import; ?></a></li>
+			]]></add>
+		</operation>
+	</file>
+</modification>
